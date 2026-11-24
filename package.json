@@ -1,0 +1,19 @@
+{
+  "name": "agentweb-linkedin-search-posts-proposal",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Proposed search_posts map entry, execute client, mock server, conformance kit and synthetic eval. Does not search LinkedIn.",
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "test": "node --test \"test/*.test.js\"",
+    "demo": "node demo/cli.js",
+    "demo:today": "node demo/cli.js --search-missing",
+    "mock": "node demo/mock-server.js",
+    "conformance": "node conformance/run.js",
+    "eval": "node eval/run.js"
+  },
+  "license": "UNLICENSED"
+}

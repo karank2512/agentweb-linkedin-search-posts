@@ -1,0 +1,252 @@
+{
+  "synthetic": true,
+  "mode": "search_missing (as today)",
+  "probe": {
+    "status": "unsupported",
+    "map_version": "0.7.2-mock",
+    "problems": []
+  },
+  "search": {
+    "error": "ACTION_NOT_FOUND",
+    "type": "UnsupportedActionError",
+    "trace_id": "tr_mock_000001",
+    "support_id": "awr_mock_000001"
+  },
+  "watchlist": {
+    "coverage": "watchlist",
+    "not_search": true,
+    "scanned": 9,
+    "matched": 6,
+    "duplicates_removed": 1,
+    "per_profile": [
+      {
+        "profile_id": "ACoAASYNTH0001",
+        "pages": 2,
+        "rows": 4,
+        "stopReason": "end_of_results",
+        "error": null
+      },
+      {
+        "profile_id": "ACoAASYNTH0002",
+        "pages": 1,
+        "rows": 2,
+        "stopReason": "end_of_results",
+        "error": null
+      },
+      {
+        "profile_id": "ACoAASYNTH0003",
+        "pages": 2,
+        "rows": 4,
+        "stopReason": "end_of_results",
+        "error": null
+      }
+    ],
+    "cost_estimate": {
+      "label": "estimate from AgentWeb docs (\"~1 credit per completed action\"); real per-action price is returned at run time and may differ",
+      "watchlist_max_credits": 6,
+      "proposed_search_credits": null,
+      "assumption_search": "one page of the proposed search_posts billed as one action (unconfirmed)"
+    },
+    "ranked": [
+      {
+        "urn": "urn:li:activity:9991000000000000301",
+        "author": "Synthetic Watch 03",
+        "score": 9,
+        "label": "likely_hiring",
+        "flags": [
+          "permalink_constructed"
+        ]
+      },
+      {
+        "urn": "urn:li:activity:9991000000000000101",
+        "author": "Synthetic Watch 01",
+        "score": 7,
+        "label": "likely_hiring",
+        "flags": [
+          "permalink_constructed"
+        ]
+      },
+      {
+        "urn": "urn:li:activity:9991000000000000104",
+        "author": "Synthetic Watch 01",
+        "score": 5,
+        "label": "likely_hiring",
+        "flags": [
+          "permalink_constructed"
+        ]
+      },
+      {
+        "urn": "urn:li:activity:9991000000000000103",
+        "author": "Synthetic Watch 01",
+        "score": 0,
+        "label": "unlikely",
+        "flags": [
+          "permalink_constructed",
+          "repost_original_urn_unknown"
+        ]
+      },
+      {
+        "urn": null,
+        "author": "Synthetic Watch 03",
+        "score": 0,
+        "label": "unlikely",
+        "flags": [
+          "no_urn",
+          "no_permalink"
+        ]
+      },
+      {
+        "urn": "urn:li:activity:9991000000000000201",
+        "author": "Synthetic Watch 02",
+        "score": -40,
+        "label": "unlikely",
+        "flags": [
+          "permalink_constructed"
+        ]
+      }
+    ]
+  },
+  "ledger": {
+    "totals": {
+      "calls": 6,
+      "ok": 5,
+      "failed": 1,
+      "credits_reported": 5,
+      "calls_without_reported_charge": 1,
+      "charge_units": [
+        "credit"
+      ],
+      "receipt_ids": [
+        "awr_mock_000001",
+        "awr_mock_000002",
+        "awr_mock_000003",
+        "awr_mock_000004",
+        "awr_mock_000005",
+        "awr_mock_000006"
+      ],
+      "trace_ids": [
+        "tr_mock_000001"
+      ],
+      "cached_calls": 0,
+      "map_versions": [
+        "0.7.2-mock"
+      ]
+    },
+    "entries": [
+      {
+        "seq": 1,
+        "lane": "rest",
+        "domain": "linkedin.com",
+        "action": "search_posts",
+        "ok": false,
+        "code": "ACTION_NOT_FOUND",
+        "http_status": 404,
+        "receipt_id": "awr_mock_000001",
+        "support_id": "awr_mock_000001",
+        "trace_id": "tr_mock_000001",
+        "map_version": null,
+        "duration_ms": null,
+        "credits": null,
+        "charge_unit": null,
+        "balance_remaining": null,
+        "cached": false,
+        "idempotency_key": "demo-search:search_posts:p1"
+      },
+      {
+        "seq": 2,
+        "lane": "rest",
+        "domain": "linkedin.com",
+        "action": "list_profile_posts",
+        "ok": true,
+        "code": null,
+        "http_status": 200,
+        "receipt_id": "awr_mock_000002",
+        "support_id": "awr_mock_000002",
+        "trace_id": null,
+        "map_version": "0.7.2-mock",
+        "duration_ms": 120,
+        "credits": 1,
+        "charge_unit": "credit",
+        "balance_remaining": 999,
+        "cached": false,
+        "idempotency_key": "demo-watchlist:ACoAASYNTH0001:list_profile_posts:p1"
+      },
+      {
+        "seq": 3,
+        "lane": "rest",
+        "domain": "linkedin.com",
+        "action": "list_profile_posts_next",
+        "ok": true,
+        "code": null,
+        "http_status": 200,
+        "receipt_id": "awr_mock_000003",
+        "support_id": "awr_mock_000003",
+        "trace_id": null,
+        "map_version": "0.7.2-mock",
+        "duration_ms": 120,
+        "credits": 1,
+        "charge_unit": "credit",
+        "balance_remaining": 998,
+        "cached": false,
+        "idempotency_key": "demo-watchlist:ACoAASYNTH0001:list_profile_posts_next:p2"
+      },
+      {
+        "seq": 4,
+        "lane": "rest",
+        "domain": "linkedin.com",
+        "action": "list_profile_posts",
+        "ok": true,
+        "code": null,
+        "http_status": 200,
+        "receipt_id": "awr_mock_000004",
+        "support_id": "awr_mock_000004",
+        "trace_id": null,
+        "map_version": "0.7.2-mock",
+        "duration_ms": 120,
+        "credits": 1,
+        "charge_unit": "credit",
+        "balance_remaining": 997,
+        "cached": false,
+        "idempotency_key": "demo-watchlist:ACoAASYNTH0002:list_profile_posts:p1"
+      },
+      {
+        "seq": 5,
+        "lane": "rest",
+        "domain": "linkedin.com",
+        "action": "list_profile_posts",
+        "ok": true,
+        "code": null,
+        "http_status": 200,
+        "receipt_id": "awr_mock_000005",
+        "support_id": "awr_mock_000005",
+        "trace_id": null,
+        "map_version": "0.7.2-mock",
+        "duration_ms": 120,
+        "credits": 1,
+        "charge_unit": "credit",
+        "balance_remaining": 996,
+        "cached": false,
+        "idempotency_key": "demo-watchlist:ACoAASYNTH0003:list_profile_posts:p1"
+      },
+      {
+        "seq": 6,
+        "lane": "rest",
+        "domain": "linkedin.com",
+        "action": "list_profile_posts_next",
+        "ok": true,
+        "code": null,
+        "http_status": 200,
+        "receipt_id": "awr_mock_000006",
+        "support_id": "awr_mock_000006",
+        "trace_id": null,
+        "map_version": "0.7.2-mock",
+        "duration_ms": 120,
+        "credits": 1,
+        "charge_unit": "credit",
+        "balance_remaining": 995,
+        "cached": false,
+        "idempotency_key": "demo-watchlist:ACoAASYNTH0003:list_profile_posts_next:p2"
+      }
+    ]
+  }
+}

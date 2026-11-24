@@ -1,0 +1,69 @@
+{
+  "_status": "PROPOSED. Not part of AgentWeb's linkedin.com map as of 24 Nov 2026. Nothing here has been confirmed by AgentWeb or observed live.",
+  "_basis": "Mirrors list_profile_posts / list_profile_posts_next as listed publicly on 24 Nov 2026 (field names hedged as reported from the public map listing). Summary style follows ActionMap.curated: {domain, version, actions[{name, description, params}]}. The exact shape AgentWeb uses for `params` in a curated summary is not public; the object form below is our proposal.",
+  "_open_questions": [
+    "Which sort and date_posted values LinkedIn's Posts search offers, and their wire names.",
+    "Whether keywords honour quoted phrases and Boolean operators in the Posts tab.",
+    "Whether the activity URN or a share URL is the stable permalink, and the canonical permalink format.",
+    "Whether one page of search is billed as one completed action.",
+    "Whether next_token is top-level or per-row in AgentWeb's list_profile_posts output (we accept both)."
+  ],
+  "domain": "linkedin.com",
+  "version": "proposal-0.1",
+  "actions": [
+    {
+      "name": "search_posts",
+      "description": "Read-only. Keyword search of LinkedIn Posts results from the connected member's session. The keyword string is passed through unchanged. Returns one page of posts and an opaque next_token (null at the end).",
+      "params": {
+        "keywords": { "type": "string", "required": true, "minLength": 1, "maxLength": 1000, "description": "Passed through unchanged (quotes, Boolean operators and unicode preserved). Must contain a non-whitespace character." },
+        "sort": { "type": "string", "required": false, "enum": ["relevance", "latest"], "default": "relevance", "description": "Proposed values; to be matched to what the Posts tab offers." },
+        "date_posted": { "type": "string", "required": false, "enum": ["any", "past_24h", "past_week", "past_month"], "default": "any", "description": "Proposed values; to be matched to what the Posts tab offers." },
+        "count": { "type": "number", "required": false, "integer": true, "minimum": 1, "maximum": 100, "default": 10, "description": "Mirrors list_profile_posts (default 10, max 100). String digits are accepted since execute coerces scalars to strings." }
+      },
+      "returns": {
+        "value": {
+          "query": "Echo of {keywords, sort, date_posted} as received, so a caller can verify pass-through.",
+          "posts": "Array of PostRow.",
+          "next_token": "Opaque string, or null at the end. Bound to the query that produced it."
+        }
+      }
+    },
+    {
+      "name": "search_posts_next",
+      "description": "Read-only. Next page of search_posts. keywords, sort and date_posted must equal the values that produced pagination_token; a mismatch is INVALID_PARAMS. Pass pagination_token unchanged.",
+      "params": {
+        "keywords": { "type": "string", "required": true, "minLength": 1, "maxLength": 1000, "description": "Same value as the first call." },
+        "sort": { "type": "string", "required": false, "enum": ["relevance", "latest"], "default": "relevance", "description": "Same value as the first call." },
+        "date_posted": { "type": "string", "required": false, "enum": ["any", "past_24h", "past_week", "past_month"], "default": "any", "description": "Same value as the first call." },
+        "pagination_token": { "type": "string", "required": true, "minLength": 1, "description": "The previous next_token, unchanged." },
+        "count": { "type": "number", "required": false, "integer": true, "minimum": 1, "maximum": 100, "default": 10, "description": "As for search_posts." }
+      },
+      "returns": { "value": "Same shape as search_posts." }
+    }
+  ],
+  "row": {
+    "_mirrors": "list_profile_posts row fields as listed publicly on 24 Nov 2026, plus permalink and posted_at_approx. Only activity_urn and permalink are strictly required (permalink_source is a requested optional field); text, age and engagement counts may be null (media-only posts, hidden counts).",
+    "fields": {
+      "text": { "type": "string|null", "required": false },
+      "age": { "type": "string|null", "required": false, "description": "Relative age as LinkedIn shows it, e.g. 3h, 2d, 1w." },
+      "reactions": { "type": "number|null", "required": false },
+      "comments": { "type": "number|null", "required": false },
+      "reposts": { "type": "number|null", "required": false },
+      "author": { "type": "string|null", "required": false },
+      "author_headline": { "type": "string|null", "required": false },
+      "author_url": { "type": "string|null", "required": false },
+      "header": { "type": "string|null", "required": false, "description": "e.g. 'X reposted this'." },
+      "activity_urn": { "type": "string", "required": true },
+      "thread_urn": { "type": "string|null", "required": false },
+      "thread_id": { "type": "string|null", "required": false },
+      "reshared_author": { "type": "string|null", "required": false },
+      "reshared_text": { "type": "string|null", "required": false },
+      "permalink": { "type": "string", "required": true, "added": true, "description": "Share URL with tracking params removed; if none exists, a URL built from activity_urn (format to confirm)." },
+      "permalink_source": { "type": "string|null", "required": false, "added": true, "enum": ["share_url", "constructed_from_urn"], "description": "Where permalink came from. constructed_from_urn means the /feed/update/<urn>/ form, whose stability is unconfirmed." },
+      "posted_at_approx": { "type": "string|null", "required": false, "added": true, "description": "ISO-8601 estimate derived from age. Always approximate." }
+    },
+    "requested_optional": {
+      "reshared_activity_urn": { "type": "string|null", "description": "Requested so a repost can be linked to its original. Not in list_profile_posts as listed; consumers must handle its absence." }
+    }
+  }
+}

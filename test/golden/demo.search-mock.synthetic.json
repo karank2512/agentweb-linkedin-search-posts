@@ -1,0 +1,470 @@
+{
+  "synthetic": true,
+  "mode": "search_present (mock)",
+  "probe": {
+    "status": "supported",
+    "map_version": "0.7.2-mock",
+    "problems": []
+  },
+  "search": {
+    "query": {
+      "keywords": "hiring",
+      "sort": "latest",
+      "date_posted": "past_month",
+      "count": 5
+    },
+    "complete": true,
+    "stopReason": "end_of_results",
+    "pages": [
+      {
+        "page": 1,
+        "action": "search_posts",
+        "rows": 5,
+        "hasNext": true
+      },
+      {
+        "page": 2,
+        "action": "search_posts_next",
+        "rows": 5,
+        "hasNext": true
+      },
+      {
+        "page": 3,
+        "action": "search_posts_next",
+        "rows": 5,
+        "hasNext": true
+      },
+      {
+        "page": 4,
+        "action": "search_posts_next",
+        "rows": 5,
+        "hasNext": true
+      },
+      {
+        "page": 5,
+        "action": "search_posts_next",
+        "rows": 1,
+        "hasNext": false
+      }
+    ],
+    "duplicates_removed": 0,
+    "warnings": [],
+    "ranked": [
+      {
+        "urn": "urn:li:activity:9990000000000000001",
+        "author": "Synthetic Author 01",
+        "permalink": "https://www.linkedin.com/posts/synthetic-author-01-example_hiring-activity-9990000000000000001-AbCd",
+        "permalink_constructed": false,
+        "posted_at": "2026-11-23T21:00:00.000Z",
+        "score": 11,
+        "label": "likely_hiring",
+        "why": "+3 we_are_hiring (\"we're hiring\"); +2 hiring_hashtag (\"#hiring\"); +2 hiring_for (\"hiring a\"); +2 join_our_team (\"join our team\"); +2 apply (\"apply here\")",
+        "flags": [
+          "possible_same_post_as:urn:li:share:9990000000000200001"
+        ],
+        "repost_of": null
+      },
+      {
+        "urn": "urn:li:share:9990000000000200001",
+        "author": "Synthetic Author 01",
+        "permalink": "https://www.linkedin.com/feed/update/urn:li:share:9990000000000200001/",
+        "permalink_constructed": true,
+        "posted_at": "2026-11-23T21:00:00.000Z",
+        "score": 11,
+        "label": "likely_hiring",
+        "why": "+3 we_are_hiring (\"we're hiring\"); +2 hiring_hashtag (\"#hiring\"); +2 hiring_for (\"hiring a\"); +2 join_our_team (\"join our team\"); +2 apply (\"apply here\")",
+        "flags": [
+          "permalink_constructed",
+          "possible_same_post_as:urn:li:activity:9990000000000000001"
+        ],
+        "repost_of": null
+      },
+      {
+        "urn": "urn:li:activity:9990000000000000010",
+        "author": "Synthetic Author 10",
+        "permalink": "https://www.linkedin.com/feed/update/urn:li:activity:9990000000000000010/",
+        "permalink_constructed": true,
+        "posted_at": "2026-11-18T00:00:00.000Z",
+        "score": 10,
+        "label": "likely_hiring",
+        "why": "+3 we_are_hiring (\"is hiring\"); +2 join_our_team (\"join our group\"); +3 looking_for_to_join (\"looking for a postdoc to join\"); +2 apply (\"applications are open\")",
+        "flags": [
+          "permalink_constructed"
+        ],
+        "repost_of": null
+      },
+      {
+        "urn": "urn:li:activity:9990000000000000009",
+        "author": "Synthetic Author 09",
+        "permalink": "https://www.linkedin.com/feed/update/urn:li:activity:9990000000000000009/",
+        "permalink_constructed": true,
+        "posted_at": "2026-11-20T00:00:00.000Z",
+        "score": 9,
+        "label": "likely_hiring",
+        "why": "+3 we_are_hiring (\"we are hiring\"); +2 hiring_for (\"hiring a\"); +2 apply (\"application link\"); +1 job_description (\"full description\"); +1 compensation (\"salary\")",
+        "flags": [
+          "permalink_constructed"
+        ],
+        "repost_of": null
+      },
+      {
+        "urn": "urn:li:activity:9990000000000000013",
+        "author": "Synthetic Author 13",
+        "permalink": "https://www.linkedin.com/feed/update/urn:li:activity:9990000000000000013/",
+        "permalink_constructed": true,
+        "posted_at": "2026-11-23T12:00:00.000Z",
+        "score": 8,
+        "label": "likely_hiring",
+        "why": "+3 we_are_hiring (\"now hiring\"); +1 interview_logistics (\"walk-in interviews\"); +2 hiring_hashtag (\"#hiring\"); +2 opens_with_hiring (\"now hiring\")",
+        "flags": [
+          "permalink_constructed"
+        ],
+        "repost_of": null
+      },
+      {
+        "urn": "urn:li:activity:9990000000000000022",
+        "author": "Synthetic Author 22",
+        "permalink": "https://www.linkedin.com/posts/synthetic-author-22-example_sre-activity-9990000000000000022-QwEr/",
+        "permalink_constructed": false,
+        "posted_at": "2026-11-03T00:00:00.000Z",
+        "score": 8,
+        "label": "likely_hiring",
+        "why": "+3 we_are_hiring (\"we are hiring\"); +2 hiring_for (\"hiring a\"); +2 apply (\"apply via\"); +1 compensation (\"compensation\")",
+        "flags": [],
+        "repost_of": null
+      },
+      {
+        "urn": "urn:li:activity:9990000000000000002",
+        "author": "Synthetic Author 02",
+        "permalink": "https://www.linkedin.com/feed/update/urn:li:activity:9990000000000000002/",
+        "permalink_constructed": true,
+        "posted_at": "2026-11-23T00:00:00.000Z",
+        "score": 6,
+        "label": "likely_hiring",
+        "why": "+3 we_are_hiring (\"is hiring\"); +2 hiring_for (\"hiring two\"); +1 dm_if_interested (\"dm me if you're interested\")",
+        "flags": [
+          "permalink_constructed"
+        ],
+        "repost_of": null
+      },
+      {
+        "urn": "urn:li:activity:9990000000000000018",
+        "author": "Synthetic Author 18",
+        "permalink": "https://www.linkedin.com/feed/update/urn:li:activity:9990000000000000018/",
+        "permalink_constructed": true,
+        "posted_at": "2026-11-23T16:00:00.000Z",
+        "score": 6,
+        "label": "likely_hiring",
+        "why": "+3 we_are_hiring (\"we're hiring\"); +2 join_our_team (\"join our team\"); +1 know_someone (\"know someone who'd be a great fit\")",
+        "flags": [
+          "permalink_constructed"
+        ],
+        "repost_of": null
+      },
+      {
+        "urn": "urn:li:activity:9990000000000000006",
+        "author": "Synthetic Author 06",
+        "permalink": "https://www.linkedin.com/feed/update/urn:li:activity:9990000000000000006/",
+        "permalink_constructed": true,
+        "posted_at": "2026-11-23T22:00:00.000Z",
+        "score": 5.5,
+        "label": "likely_hiring",
+        "why": "+1.5 we_are_hiring[orig] (\"we're hiring\"); +1 hiring_hashtag[orig] (\"#hiring\"); +1 hiring_for[orig] (\"hiring a\"); +1 join_our_team[orig] (\"join our team\"); +1 apply[orig] (\"apply here\")",
+        "flags": [
+          "permalink_constructed",
+          "original_in_results"
+        ],
+        "repost_of": "urn:li:activity:9990000000000000001"
+      },
+      {
+        "urn": "urn:li:activity:9990000000000000020",
+        "author": "Synthetic Author 20",
+        "permalink": "https://www.linkedin.com/feed/update/urn:li:activity:9990000000000000020/",
+        "permalink_constructed": true,
+        "posted_at": "2026-10-25T00:00:00.000Z",
+        "score": 5,
+        "label": "likely_hiring",
+        "why": "+2 hiring_for (\"hiring for\"); +2 opens_with_hiring (\"hiring\"); +1 dm_if_interested (\"message me for details\")",
+        "flags": [
+          "permalink_constructed"
+        ],
+        "repost_of": null
+      },
+      {
+        "urn": "urn:li:activity:9990000000000000005",
+        "author": "Synthetic Author 05",
+        "permalink": "https://www.linkedin.com/feed/update/urn:li:activity:9990000000000000005/",
+        "permalink_constructed": true,
+        "posted_at": "2026-11-23T00:00:00.000Z",
+        "score": 2,
+        "label": "unclear",
+        "why": "+3 we_are_hiring (\"is hiring\"); +1 opening (\"openings\"); +1 send_cv (\"send your cv\"); -3 agency_volume (\"our client\")",
+        "flags": [
+          "permalink_constructed"
+        ],
+        "repost_of": null
+      },
+      {
+        "urn": "urn:li:activity:9990000000000000008",
+        "author": "Synthetic Author 08",
+        "permalink": "https://www.linkedin.com/feed/update/urn:li:activity:9990000000000000008/",
+        "permalink_constructed": true,
+        "posted_at": "2026-11-17T00:00:00.000Z",
+        "score": 0,
+        "label": "unlikely",
+        "why": "+3 we_are_hiring (\"is hiring\"); -3 new_job_announcement (\"excited to share that i've started\")",
+        "flags": [
+          "permalink_constructed"
+        ],
+        "repost_of": null
+      },
+      {
+        "urn": "urn:li:activity:9990000000000000004",
+        "author": "Synthetic Author 04",
+        "permalink": "https://www.linkedin.com/feed/update/urn:li:activity:9990000000000000004/",
+        "permalink_constructed": true,
+        "posted_at": "2026-11-23T19:00:00.000Z",
+        "score": -1,
+        "label": "unlikely",
+        "why": "+3 we_are_hiring (\"are hiring\"); -4 engagement_bait (\"comment 'interested\")",
+        "flags": [
+          "permalink_constructed"
+        ],
+        "repost_of": null
+      },
+      {
+        "urn": "urn:li:activity:9990000000000000012",
+        "author": "Synthetic Author 12",
+        "permalink": "https://www.linkedin.com/feed/update/urn:li:activity:9990000000000000012/",
+        "permalink_constructed": true,
+        "posted_at": "2026-11-10T00:00:00.000Z",
+        "score": -2,
+        "label": "unlikely",
+        "why": "-2 hiring_market_news (\"hiring freeze\")",
+        "flags": [
+          "permalink_constructed"
+        ],
+        "repost_of": null
+      },
+      {
+        "urn": "urn:li:activity:9990000000000000015",
+        "author": "Synthetic Author 15",
+        "permalink": "https://www.linkedin.com/feed/update/urn:li:activity:9990000000000000015/",
+        "permalink_constructed": true,
+        "posted_at": "2026-11-19T00:00:00.000Z",
+        "score": -2,
+        "label": "unlikely",
+        "why": "-2 past_hire (\"please welcome\")",
+        "flags": [
+          "permalink_constructed"
+        ],
+        "repost_of": null
+      },
+      {
+        "urn": "urn:li:activity:9990000000000000017",
+        "author": "Synthetic Author 17",
+        "permalink": "https://www.linkedin.com/feed/update/urn:li:activity:9990000000000000017/",
+        "permalink_constructed": true,
+        "posted_at": "2026-11-22T00:00:00.000Z",
+        "score": -3,
+        "label": "unlikely",
+        "why": "-3 role_filled (\"role has been filled\")",
+        "flags": [
+          "permalink_constructed"
+        ],
+        "repost_of": null
+      },
+      {
+        "urn": "urn:li:activity:9990000000000000021",
+        "author": "Synthetic Author 21",
+        "permalink": "https://www.linkedin.com/feed/update/urn:li:activity:9990000000000000021/",
+        "permalink_constructed": true,
+        "posted_at": "2026-11-20T00:00:00.000Z",
+        "score": -4,
+        "label": "unlikely",
+        "why": "-4 engagement_bait (\"agree?\")",
+        "flags": [
+          "permalink_constructed"
+        ],
+        "repost_of": null
+      },
+      {
+        "urn": "urn:li:activity:9990000000000000007",
+        "author": "Synthetic Author 07",
+        "permalink": "https://www.linkedin.com/feed/update/urn:li:activity:9990000000000000007/",
+        "permalink_constructed": true,
+        "posted_at": "2026-11-21T00:00:00.000Z",
+        "score": -6,
+        "label": "unlikely",
+        "why": "-4 engagement_bait (\"thoughts?\"); -2 hiring_commentary (\"hiring managers should\")",
+        "flags": [
+          "permalink_constructed"
+        ],
+        "repost_of": null
+      },
+      {
+        "urn": "urn:li:activity:9990000000000000016",
+        "author": "Synthetic Author 16",
+        "permalink": "https://www.linkedin.com/feed/update/urn:li:activity:9990000000000000016/",
+        "permalink_constructed": true,
+        "posted_at": "2026-11-23T00:00:00.000Z",
+        "score": -10,
+        "label": "unlikely",
+        "why": "-10 asking_for_referral (\"who's hiring\")",
+        "flags": [
+          "permalink_constructed"
+        ],
+        "repost_of": null
+      },
+      {
+        "urn": "urn:li:activity:9990000000000000014",
+        "author": "Synthetic Author 14",
+        "permalink": "https://www.linkedin.com/feed/update/urn:li:activity:9990000000000000014/",
+        "permalink_constructed": true,
+        "posted_at": "2026-11-21T00:00:00.000Z",
+        "score": -20,
+        "label": "unlikely",
+        "why": "-10 open_to_work (\"#opentowork\"); -10 laid_off (\"i was laid off\")",
+        "flags": [
+          "permalink_constructed"
+        ],
+        "repost_of": null
+      },
+      {
+        "urn": "urn:li:activity:9990000000000000003",
+        "author": "Synthetic Author 03",
+        "permalink": "https://www.linkedin.com/feed/update/urn:li:activity:9990000000000000003/",
+        "permalink_constructed": true,
+        "posted_at": "2026-11-22T00:00:00.000Z",
+        "score": -30,
+        "label": "unlikely",
+        "why": "-10 open_to_work (\"#opentowork\"); -10 looking_for_job (\"i'm looking for a new role\"); -10 asking_for_referral (\"is anyone hiring\")",
+        "flags": [
+          "permalink_constructed"
+        ],
+        "repost_of": null
+      }
+    ]
+  },
+  "ledger": {
+    "totals": {
+      "calls": 5,
+      "ok": 5,
+      "failed": 0,
+      "credits_reported": 5,
+      "calls_without_reported_charge": 0,
+      "charge_units": [
+        "credit"
+      ],
+      "receipt_ids": [
+        "awr_mock_000001",
+        "awr_mock_000002",
+        "awr_mock_000003",
+        "awr_mock_000004",
+        "awr_mock_000005"
+      ],
+      "trace_ids": [],
+      "cached_calls": 0,
+      "map_versions": [
+        "0.7.2-mock"
+      ]
+    },
+    "entries": [
+      {
+        "seq": 1,
+        "lane": "rest",
+        "domain": "linkedin.com",
+        "action": "search_posts",
+        "ok": true,
+        "code": null,
+        "http_status": 200,
+        "receipt_id": "awr_mock_000001",
+        "support_id": "awr_mock_000001",
+        "trace_id": null,
+        "map_version": "0.7.2-mock",
+        "duration_ms": 120,
+        "credits": 1,
+        "charge_unit": "credit",
+        "balance_remaining": 999,
+        "cached": false,
+        "idempotency_key": "demo-search:search_posts:p1"
+      },
+      {
+        "seq": 2,
+        "lane": "rest",
+        "domain": "linkedin.com",
+        "action": "search_posts_next",
+        "ok": true,
+        "code": null,
+        "http_status": 200,
+        "receipt_id": "awr_mock_000002",
+        "support_id": "awr_mock_000002",
+        "trace_id": null,
+        "map_version": "0.7.2-mock",
+        "duration_ms": 120,
+        "credits": 1,
+        "charge_unit": "credit",
+        "balance_remaining": 998,
+        "cached": false,
+        "idempotency_key": "demo-search:search_posts_next:p2"
+      },
+      {
+        "seq": 3,
+        "lane": "rest",
+        "domain": "linkedin.com",
+        "action": "search_posts_next",
+        "ok": true,
+        "code": null,
+        "http_status": 200,
+        "receipt_id": "awr_mock_000003",
+        "support_id": "awr_mock_000003",
+        "trace_id": null,
+        "map_version": "0.7.2-mock",
+        "duration_ms": 120,
+        "credits": 1,
+        "charge_unit": "credit",
+        "balance_remaining": 997,
+        "cached": false,
+        "idempotency_key": "demo-search:search_posts_next:p3"
+      },
+      {
+        "seq": 4,
+        "lane": "rest",
+        "domain": "linkedin.com",
+        "action": "search_posts_next",
+        "ok": true,
+        "code": null,
+        "http_status": 200,
+        "receipt_id": "awr_mock_000004",
+        "support_id": "awr_mock_000004",
+        "trace_id": null,
+        "map_version": "0.7.2-mock",
+        "duration_ms": 120,
+        "credits": 1,
+        "charge_unit": "credit",
+        "balance_remaining": 996,
+        "cached": false,
+        "idempotency_key": "demo-search:search_posts_next:p4"
+      },
+      {
+        "seq": 5,
+        "lane": "rest",
+        "domain": "linkedin.com",
+        "action": "search_posts_next",
+        "ok": true,
+        "code": null,
+        "http_status": 200,
+        "receipt_id": "awr_mock_000005",
+        "support_id": "awr_mock_000005",
+        "trace_id": null,
+        "map_version": "0.7.2-mock",
+        "duration_ms": 120,
+        "credits": 1,
+        "charge_unit": "credit",
+        "balance_remaining": 995,
+        "cached": false,
+        "idempotency_key": "demo-search:search_posts_next:p5"
+      }
+    ]
+  }
+}
